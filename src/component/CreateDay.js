@@ -6,7 +6,9 @@ import useFetch from "../hooks/useFetch";
 
 export default function CreateDay() {
   const day = useFetch(`http://localhost:3001/days`);
+
   const [delday, setDelday] = useState(day);
+
   const his = useHistory();
 
   const dayRef = useRef(null);
@@ -29,17 +31,19 @@ export default function CreateDay() {
 
   function del() {
     if (window.confirm(`${dayRef.current.value} day 삭제 하시겠습니까?`)) {
-      fetch(`http://localhost:3001/days/${delday.id}`, {
+      fetch(`http://localhost:3001/days/${delday}${dayRef.current.value}`, {
         method: "DELETE",
       }).then((res) => {
         if (res.ok) {
           setDelday({ id: 0 });
+          his.push("/");
         }
       });
     }
   }
 
   if (delday.id === 0) {
+    console.log("내가 만든 삭제 day");
     return null;
   }
 
@@ -56,7 +60,9 @@ export default function CreateDay() {
           ))}
         </select>
       </div>
-      <button onClick={del}>DAY 삭제</button>
+      <button onClick={del} className="btn_del">
+        DAY 삭제
+      </button>
     </>
   );
 }

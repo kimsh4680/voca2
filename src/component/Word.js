@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Word(props) {
-  const [word, setWord] = useState(props.word);
+  const [word, setWord] = useState(props.words);
   const [isShow, setisShow] = useState(false);
   const [isDone, setisDone] = useState(word.isDone);
 

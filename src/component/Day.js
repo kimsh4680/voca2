@@ -7,8 +7,8 @@ export default function Day() {
   //   const day = 2;
   const a = useParams();
   const day = a.day;
-  // console.log(a);
-
+  console.log(a);
+  console.log(a.day);
   // const {day} = useParams();
   // const wordList = dummy.words.filter((word) => word.day === Number(day));
   // console.log(wordList);

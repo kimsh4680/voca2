@@ -1,5 +1,7 @@
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 import useFetch from "../hooks/useFetch";
 import Word from "./Word";
 
@@ -7,8 +9,8 @@ export default function Day() {
   //   const day = 2;
   const a = useParams();
   const day = a.day;
-  console.log(a);
-  console.log(a.day);
+  // console.log(a);
+  //console.log(a.day);
   // const {day} = useParams();
   // const wordList = dummy.words.filter((word) => word.day === Number(day));
   // console.log(wordList);
@@ -30,8 +32,11 @@ export default function Day() {
   const his = useHistory();
 
   function onc1() {
-    his.push(`/day/${day - 1}`);
+    console.log(`${Number(day) - 1}`);
+
+    his.push(`/day/${Number(day) - 1}`);
   }
+
   function onc2() {
     his.push(`/day/${Number(day) + 1}`);
   }
@@ -43,7 +48,7 @@ export default function Day() {
   return (
     <>
       <p style={{ display: "flex" }}>
-        <button onClick={onc1}> {Number(day) - 1} Day</button>
+        <button onClick={onc1}>{Number(day) - 1} Day</button>
         <h2>DAY {day}</h2>
         <button onClick={onc2}> {Number(day) + 1} Day</button>
       </p>

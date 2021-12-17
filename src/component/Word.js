@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-export default function Word(props) {
-  const [word, setWord] = useState(props.words);
-  const [isShow, setisShow] = useState(false);
-  const [isDone, setisDone] = useState(word.isDone);
+export default function Word({ word: w }) {
+  const [isShow, setisShow] = useState(true);
+  const [isDone, setisDone] = useState(w.isDone);
+  const [word, setWord] = useState(w);
 
   function toggleShow() {
     setisShow(!isShow);
   }
 
   function toggleDone() {
-    // setisDone(!isDone);
+    //    setisDone(!isDone);
     fetch(`http://localhost:3001/words/${word.id}`, {
       method: `PUT`,
       headers: {
@@ -38,7 +38,6 @@ export default function Word(props) {
       });
     }
   }
-
   if (word.id === 0) {
     return null;
   }
@@ -48,11 +47,9 @@ export default function Word(props) {
         <input type="checkbox" checked={isDone} onChange={toggleDone} />
       </td>
       <td>{word.eng}</td>
-      <td>{isShow && word.kor}</td>
+      <td>{!isShow && word.kor}</td>
       <td>
-        <button onClick={toggleShow}>
-          {!isShow ? "뜻 보기" : "뜻 숨기기"}
-        </button>
+        <button onClick={toggleShow}>{isShow ? "뜻 보기" : "뜻 숨기기"}</button>
         <button onClick={del} className="btn_del">
           삭제
         </button>

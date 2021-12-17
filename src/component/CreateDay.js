@@ -1,6 +1,5 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
 
 import useFetch from "../hooks/useFetch";
 
@@ -31,7 +30,7 @@ export default function CreateDay() {
 
   function del() {
     if (window.confirm(`${dayRef.current.value} day 삭제 하시겠습니까?`)) {
-      fetch(`http://localhost:3001/days/${delday}${dayRef.current.value}`, {
+      fetch(`http://localhost:3001/days/${dayRef.current.value}`, {
         method: "DELETE",
       }).then((res) => {
         if (res.ok) {

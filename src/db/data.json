@@ -15,26 +15,6 @@
     {
       "day": 4,
       "id": 4
-    },
-    {
-      "day": 5,
-      "id": 5
-    },
-    {
-      "day": 6,
-      "id": 6
-    },
-    {
-      "day": 7,
-      "id": 7
-    },
-    {
-      "day": 8,
-      "id": 8
-    },
-    {
-      "day": 9,
-      "id": 9
     }
   ],
   "words": [
@@ -43,7 +23,7 @@
       "day": 1,
       "eng": "apple",
       "kor": "사과",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": 2,
@@ -68,80 +48,59 @@
     },
     {
       "day": "1",
-      "eng": "kimdh",
-      "kor": "김대희",
+      "eng": "kimsh124",
+      "kor": "석희 비번",
       "isDone": false,
       "id": 6
     },
     {
-      "day": "5",
-      "eng": "cat",
-      "kor": "고양이",
+      "day": "4",
+      "eng": "kimdj4680",
+      "kor": "김동열",
       "isDone": false,
       "id": 7
     },
     {
-      "day": "6",
-      "eng": "two",
-      "kor": "둘",
+      "day": "1",
+      "eng": "water",
+      "kor": "물",
       "isDone": false,
       "id": 8
     },
     {
-      "day": "4",
-      "eng": "dog",
-      "kor": "개",
+      "day": "1",
+      "eng": "and",
+      "kor": "개미",
       "isDone": false,
       "id": 9
     },
     {
-      "day": "4",
-      "eng": "cat",
-      "kor": "고양이",
+      "day": "1",
+      "eng": "wow",
+      "kor": "와우",
       "isDone": false,
       "id": 10
     },
     {
-      "day": "8",
-      "eng": "hi",
-      "kor": "안녕",
+      "day": "1",
+      "eng": "now",
+      "kor": "지금",
       "isDone": false,
       "id": 11
     },
     {
-      "day": "9",
-      "eng": "oh",
-      "kor": "오",
+      "day": "1",
+      "eng": "two",
+      "kor": "2",
       "isDone": false,
       "id": 12
     },
     {
-      "day": "7",
-      "eng": "kimsh4680",
-      "kor": "김석희",
+      "day": "1",
+      "eng": "phone",
+      "kor": "핸드폰",
       "isDone": false,
       "id": 13
-    },
-    {
-      "day": "1",
-      "eng": "origin",
-      "kor": "기원",
-      "isDone": false,
-      "id": 14
-    },
-    {
-      "day": "2",
-      "eng": "fuck you",
-      "kor": "욕",
-      "isDone": false,
-      "id": 16
-    },
-    {
-      "day": "10",
-      "eng": "react",
-      "kor": "리액트",
-      "isDone": false,
-      "id": 18
     }
   ]
 }

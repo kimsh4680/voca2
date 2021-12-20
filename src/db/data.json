@@ -15,6 +15,14 @@
     {
       "day": 4,
       "id": 4
+    },
+    {
+      "day": 5,
+      "id": 5
+    },
+    {
+      "day": 6,
+      "id": 6
     }
   ],
   "words": [
@@ -30,7 +38,7 @@
       "day": 1,
       "eng": "car",
       "kor": "자동차",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": 4,
@@ -101,6 +109,139 @@
       "kor": "핸드폰",
       "isDone": false,
       "id": 13
+    },
+    {
+      "day": "1",
+      "eng": "english",
+      "kor": "영어",
+      "isDone": false,
+      "id": 14
+    },
+    {
+      "day": "1",
+      "eng": "apple",
+      "kor": "애플",
+      "isDone": false,
+      "id": 15
+    },
+    {
+      "day": "1",
+      "eng": "school",
+      "kor": "학교",
+      "isDone": false,
+      "id": 16
+    },
+    {
+      "day": "1",
+      "eng": "there",
+      "kor": "그들",
+      "isDone": false,
+      "id": 17
+    },
+    {
+      "day": "1",
+      "eng": "bad ",
+      "kor": "침대",
+      "isDone": false,
+      "id": 18
+    },
+    {
+      "day": "1",
+      "eng": "mm",
+      "kor": "밀리",
+      "isDone": false,
+      "id": 19
+    },
+    {
+      "day": "1",
+      "eng": "bond",
+      "kor": "끈",
+      "isDone": false,
+      "id": 20
+    },
+    {
+      "day": "1",
+      "eng": "guy",
+      "kor": "남자",
+      "isDone": false,
+      "id": 21
+    },
+    {
+      "day": "1",
+      "eng": "muddle",
+      "kor": "헝클어뜨리다",
+      "isDone": false,
+      "id": 22
+    },
+    {
+      "day": "1",
+      "eng": "up",
+      "kor": "위",
+      "isDone": false,
+      "id": 23
+    },
+    {
+      "day": "1",
+      "eng": "down",
+      "kor": "아래",
+      "isDone": false,
+      "id": 24
+    },
+    {
+      "day": "1",
+      "eng": "left",
+      "kor": "왼쪽",
+      "isDone": false,
+      "id": 25
+    },
+    {
+      "day": "1",
+      "eng": "right",
+      "kor": "오른쪽",
+      "isDone": false,
+      "id": 26
+    },
+    {
+      "day": "1",
+      "eng": "sit ",
+      "kor": "앉다",
+      "isDone": false,
+      "id": 27
+    },
+    {
+      "day": "1",
+      "eng": "fun ",
+      "kor": "재미",
+      "isDone": false,
+      "id": 28
+    },
+    {
+      "day": "1",
+      "eng": "circle",
+      "kor": "원",
+      "isDone": false,
+      "id": 29
+    },
+    {
+      "day": "1",
+      "eng": "lend",
+      "kor": "빌려주다",
+      "isDone": false,
+      "id": 30
+    },
+    {
+      "day": "1",
+      "eng": "grade",
+      "kor": "학년",
+      "isDone": false,
+      "id": 31
+    },
+    {
+      "day": "3",
+      "eng": "hello2 ",
+      "kor": "안녕2",
+      "isDone": false,
+      "id": 32
     }
   ]
 }

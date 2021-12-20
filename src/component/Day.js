@@ -1,14 +1,37 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import useFetch from "../hooks/useFetch";
+import Pagingwords from "./Pagingwords";
 import Word from "./Word";
 
 export default function Day() {
   //   const day = 2;
   const a = useParams();
   const day = a.day;
+  // 페이징 처리
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setcurrentPage] = useState(1);
+  const [postsPerPage, setpostsPerPage] = useState(5);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setLoading(true);
+      const res = await axios.get(`http://localhost:3001/words?day=${day}`);
+      setPosts(res.data);
+      setLoading(false);
+    };
+    fetchPosts();
+  }, [day]);
+
+  console.log(posts);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
   // console.log(a);
   //console.log(a.day);
   // const {day} = useParams();
@@ -27,7 +50,7 @@ export default function Day() {
   //     });
   // }, [day]);
 
-  const words = useFetch(`http://localhost:3001/words?day=${day}`);
+  //const words = useFetch(`http://localhost:3001/words?day=${day}`);
 
   const his = useHistory();
 
@@ -41,9 +64,13 @@ export default function Day() {
     his.push(`/day/${Number(day) + 1}`);
   }
 
-  if (words.length === 0) {
+  if (posts.length === 0) {
     return <h2>로딩중...</h2>;
   }
+
+  const paginate = (pageNumber) => {
+    setcurrentPage(pageNumber);
+  };
 
   return (
     <>
@@ -55,10 +82,15 @@ export default function Day() {
 
       <table>
         <tbody>
-          {words.map((word) => (
-            <Word word={word} key={word.id} />
+          {currentPosts.map((post) => (
+            <Word word={post} key={post.id} />
           ))}
         </tbody>
+        <Pagingwords
+          postsPerPage={postsPerPage}
+          totalPosts={posts.length}
+          paginate={paginate}
+        />
       </table>
     </>
   );
